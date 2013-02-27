@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Subject:
+  = @task.subject
+%p
+  %b Body:
+  = @task.body
+%p
+  %b Created by:
+  = @task.user.email
+%p
+  %b Shared:
+  = @task.shared
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

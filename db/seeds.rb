@@ -13,3 +13,8 @@ User.create(email: 'test2@example.com', password: 'password', password_confirmat
 User.create(email: 'test3@example.com', password: 'password', password_confirmation: 'password')
 User.create(email: 'test4@example.com', password: 'password', password_confirmation: 'password')
 User.create(email: 'test5@example.com', password: 'password', password_confirmation: 'password')
+User.create(email: 'test11@example.com', password: 'password', password_confirmation: 'password')
+User.create(email: 'test12@example.com', password: 'password', password_confirmation: 'password')
+User.create(email: 'test13@example.com', password: 'password', password_confirmation: 'password')
+User.create(email: 'test41@example.com', password: 'password', password_confirmation: 'password')
+User.create(email: 'test51@example.com', password: 'password', password_confirmation: 'password')

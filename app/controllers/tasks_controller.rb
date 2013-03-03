@@ -35,9 +35,7 @@ class TasksController < ApplicationController
   end
 
   def update
-
     flash[:success] = 'Task was successfully updated.' if @task.update_attributes(params[:task])
-
     respond_with @task
   end
 

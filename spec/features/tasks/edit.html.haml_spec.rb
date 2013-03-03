@@ -1,14 +1,10 @@
 require 'spec_helper'
 
 describe "tasks/edit" do
-  before(:each) do
-    @task = assign(:task, stub_model(Task,
-      :subject => "MyString",
-      :body => "MyText",
-      :user_id => 1,
-      :shared => false
-    ))
-  end
+
+  let(:user) {FactoryGirl.create(:user)}
+  let(:task) {FactoryGirl.create(:task, user: user)}
+  before {sign_in user}
 
   it "renders the edit task form" do
     render
@@ -17,8 +13,7 @@ describe "tasks/edit" do
     assert_select "form", :action => tasks_path(@task), :method => "post" do
       assert_select "input#task_subject", :name => "task[subject]"
       assert_select "textarea#task_body", :name => "task[body]"
-      assert_select "input#task_user_id", :name => "task[user_id]"
-      assert_select "input#task_shared", :name => "task[shared]"
+
     end
   end
 end

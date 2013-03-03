@@ -1,19 +1,24 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 gem 'devise'
-gem 'haml-rails', '>= 0.3.4'
-gem 'bootstrap-sass', "~> 2.2.2.0"
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.6'
+gem 'haml-rails'
+gem 'bootstrap-sass'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
-  gem 'rspec-rails', '2.11.0'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 # Gems used only for assets and not required

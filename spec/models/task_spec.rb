@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Task do
 
-  let(:user) {User.create(email: 'test@example.com', password: 'password', password_confirmation: 'password')}
+  let(:user) {FactoryGirl.create(:user)}
 
   before do
     @task = user.tasks.build(subject: 'Test subject', body: 'Test task body')
@@ -55,7 +55,7 @@ describe Task do
 
 
   describe "saving with editor_ids" do
-    let(:editor) {User.create(email: 'editor@example.com', password: 'password', password_confirmation: 'password')}
+    let(:editor) {FactoryGirl.create(:user)}
     before do
       @task.editor_ids = [editor.id]
       @task.save
